@@ -16,14 +16,14 @@ def not_blank(question):
 
 # Main Rountine goes here
 # Fiding area of a square
-width = float(input('Please enter the widith of your rectangle: '))
-height = float(input('Please enter the height of your rectangle: '))
+width = float(input('Please enter the widith of your Square: '))
+height = float(input('Please enter the height of your Square: '))
 
 # Caculate the area
-area = width * height
+area = height ** 2
 
 # Calculate the perimeter
-perimeter = 2 * (width + height)
+perimeter = 4 * height
 
 print("\n Area of your square is: %.2f" %Area)
 print(" Perimeter of your square is: %2f" %Perimeter)
