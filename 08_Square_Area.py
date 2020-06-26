@@ -25,6 +25,6 @@ area = height ** 2
 # Calculate the perimeter
 perimeter = 4 * height
 
-print("\n Area of your square is: %.2f" %Area)
-print(" Perimeter of your square is: %2f" %Perimeter)
+print("\n Area of your square is: %.2f" %area)
+print(" Perimeter of your square is: %2f" %perimeter)
 
