@@ -1,41 +1,4 @@
-# Iterates through string...
-
-# ask user for string
-recipe_name = input("Please chose a number between 1 and 4? ")
-
-error = "Your response name has numbers in it."
-has_errors = ""
-
-
-# look at each character in string and if it's a letter, complain
-for letter in recipe_name:
-    if letter.isdigit() == True:
-        print(error)
-        has_errors = "yes"
-        break
-
-
-    def num_check(question):
-
-      error = "Please enter a number that is more than zero"
-
-      valid = False
-      while not valid:
-        try:
-          response = float(input(question))
-
-          if response <= 0:
-            print(error)
-          else:
-            return response
-
-        except ValueError:
-          print(error)
-
-# give user feedback...
-if has_errors != "yes":
-    print("you are OK")
-
+# Welcome to The Area Perimeter Calculator
 
 # Not Blank Function goes here
 def not_blank(question):
@@ -55,7 +18,6 @@ def not_blank(question):
 
 # ask user for string
 shape_name=input()
-
 print("Circle")
 print("Triangle")
 print("Square")
@@ -66,7 +28,7 @@ shape_name = input("What is the shape name? ")
 error = "Your shape name has numbers in it."
 has_errors = ""
 
-# look at each character in string and if it's a number, complain
+# looks at each character in string and if it's a number, complain
 for letter in shape_name:
     if letter.isdigit() == True:
         print(error)
@@ -77,7 +39,8 @@ for letter in shape_name:
 if has_errors != "yes":
     print("you are OK")
 
-print( "You have selected {}". format(shape_name))
+print("You have selected {}". format(shape_name))
+# Asked what the name of the shape was
 
 # Ask what the side a and b is
 # Write formula so program can print correctly
