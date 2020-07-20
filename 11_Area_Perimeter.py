@@ -45,7 +45,6 @@ print("You have selected {}". format(shape_name))
 # Ask what the side a and b is
 # Write formula so program can print correctly
 
-
 # Not Blank Function goes here
 def not_blank(question):
 
@@ -58,13 +57,13 @@ def not_blank(question):
         else:
             return response
 
-# Main Rountine goes here
-# Fiding area of a Rectangle
+# Main Routine goes here
+# Finding area of a Rectangle
 
 width = float(input('Please enter the widith of your rectangle: '))
 height = float(input('Please enter the height of your rectangle: '))
 
-# Caculate the area
+# Calculate the area
 area = width * height
 
 # Calculate the perimeter
@@ -73,7 +72,7 @@ perimeter = 2 * (width + height)
 print("\n Area of your rectangle is: %.2f" %area)
 print(" Perimeter of your rectangle is: %2f" %perimeter)
 
-# Ask what the widith and height
+# Ask what the width and height
 # Write formula so program can print correctly
 
 
@@ -91,14 +90,14 @@ def not_blank(question):
 
 # Main Rountine goes here
 # Fiding area of a Square
-width = float(input('Please enter the widith of your Square: '))
-height = float(input('Please enter the height of your Square: '))
+a = float(input('Please enter the widith of your Square: '))
+b = float(input('Please enter the height of your Square: '))
 
-# Caculate the area
-area = width * height
+# Calculate the area
+area = a ** 2
 
 # Calculate the perimeter
-perimeter = 2 * (width + height)
+perimeter = 4 * a
 
 print("\n Area of your square is: %.2f" %area)
 print(" Perimeter of your square is: %2f" %perimeter)
@@ -125,8 +124,8 @@ a = int(input('Enter First side'))
 b = int(input('Enter second side'))
 c = int(input('Enter Third side'))
 
-# Caculate the area
-area = a + b + c/2
+# Calculate the area
+area = a * b/2
 
 # Calculate the perimeter
 perimeter = a + b + c
@@ -137,7 +136,7 @@ print(" Perimeter of your Triangle is: %2f" %perimeter)
 
 # Ask what the radius is
 # Write formula so program can print correctly
-
+# Use letters not width or length
 
 # Not Blank Function goes here
 def not_blank(question):
@@ -151,12 +150,11 @@ def not_blank(question):
         else:
             return response
 
-# Main Rountine goes here
-# Fiding area of a Circle
-width = float(input('Please enter the widith of your Circle: '))
-height = float(input('Please enter the height of your Circle: '))
+# Main Routine goes here
+# Finding area of a Circle
+r = float(input('Please enter the radius: '))
 
-# Caculate the area
+# Calculate the area
 area = 3.14 * r **2
 
 # Calculate the perimeter
