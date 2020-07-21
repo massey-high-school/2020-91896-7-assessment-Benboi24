@@ -44,14 +44,38 @@ def string_checker(question, to_check):
 answer = None
 while answer not in ("yes", "no"):
     answer = input("Enter yes or no: ")
-    if answer == "yes":
-        # Do this.
-    elif answer == "no":
-        # Do that.
-    else:
-    	print("Please enter yes or no.")
+if answer == "yes":
+    # Do this.
+elif answer == "no":
+    # Do that.
+else:
+    print("Please enter yes or no.")
 
 # *** Main Routine starts here ***
+
+#Instructions
+def instructions():
+    print("****** Welcome to the Fund Raising Calculator ******")
+
+    first_time = input("\nHave you used this program before? ")
+
+    if first_time == "yes":
+        return ""
+
+    print()
+    print("***** Instructions ******")
+    print()
+    print("This program will ask you for...")
+    print("- The name of the shape you want to chose")
+    print("- It will ask for the height, base or other sides depending on shape")
+    print()
+    print("The program will print out the area and perimeter for the shape you chose.")
+    print()
+
+
+instructions()
+
+#String Checker
 
 yes_no = ["yes", "no"]
 rps = ["rock", "paper", "scissors"]
@@ -80,6 +104,8 @@ def not_blank(question):
 # Iterates through string...
 
 # ask user for string
+#Instructions
+
 shape_name=input()
 print("Circle")
 print("Triangle")
@@ -120,7 +146,8 @@ if input(Rectangle):
 
 # Ask what the side a and b is
 # Write formula so program can print correctly
-# Main Routine goes here
+
+# Rectangle
 # Finding area of a Rectangle
 
 height = float(input('Please enter the height of your rectangle: '))
@@ -138,7 +165,7 @@ print(" Perimeter of your rectangle is: %2f" %perimeter)
 # Write formula so program can print correctly
 
 
-# Main Routine goes here
+# Square
 # Finding area of a Square
 a = float(input('Please enter the width of your Square: '))
 
@@ -151,10 +178,10 @@ perimeter = 4 * a
 print("\n Area of your square is: %.2f" %area)
 print(" Perimeter of your square is: %2f" %perimeter)
 
-# Ask what the side a, b and c is
+# Ask what the side a the base and what side c is
 # Write formula so program can print correctly
 
-# Main Routine goes here
+# Triangle
 
 a = int(input('Please enter side a'))
 base = int(input('Please enter Base '))
@@ -175,7 +202,7 @@ print(" Perimeter of your Triangle is: %2f" %perimeter)
 # Use letters not width or length
 
 
-# Main Routine goes here
+# Circle
 # Finding area of a Circle
 r = float(input('Please enter the radius: '))
 
