@@ -1,5 +1,68 @@
 # Welcome to The Area Perimeter Calculator
 
+# ***** Functions *****
+
+# Number checking function (number must be a float that is more than 0)
+def num_check(question):
+
+    error = "Please enter a number that is more than zero"
+
+    valid = False
+    while not valid:
+        try:
+            response = float(input(question))
+
+            if response <= 0:
+                print(error)
+            else:
+                return response
+
+        except ValueError:
+            print(error)
+
+# String checking Function
+def string_checker(question, to_check):
+    valid = False
+    while not valid:
+
+        response = input(question).lower()
+
+        if response in to_check:
+            return response
+
+        else:
+            for item in to_check:
+                # checks if response is the first letter of an item in the list
+                if response == item[0]:
+                    # note: returns the entire response rather than just the first letter
+                    return item
+
+        print("sorry that is not a valid response")
+
+# Yes No Function
+
+answer = None
+while answer not in ("yes", "no"):
+    answer = input("Enter yes or no: ")
+    if answer == "yes":
+        # Do this.
+    elif answer == "no":
+        # Do that.
+    else:
+    	print("Please enter yes or no.")
+
+# *** Main Routine starts here ***
+
+yes_no = ["yes", "no"]
+rps = ["rock", "paper", "scissors"]
+
+mood = string_checker("Are you happy? ", yes_no)
+print(mood)
+
+choose = string_checker("Choose: ", rps)
+print(choose)
+
+
 # Not Blank Function goes here
 def not_blank(question):
 
@@ -42,27 +105,26 @@ if has_errors != "yes":
 print("You have selected {}". format(shape_name))
 # Asked what the name of the shape was
 
+Circle = shape_name
+if input(Circle):
+    print("Okay")
+Triangle = shape_name
+if input(Triangle):
+    print("Okay")
+Square = shape_name
+if input(Square):
+    print("Okay")
+Rectangle = shape_name
+if input(Rectangle):
+    print("Okay")
+
 # Ask what the side a and b is
 # Write formula so program can print correctly
-
-# Not Blank Function goes here
-def not_blank(question):
-
-    valid = False
-    while not valid:
-        response = input(question)
-
-        if response == "":
-            continue
-        else:
-            return response
-
 # Main Routine goes here
 # Finding area of a Rectangle
 
-width = float(input('Please enter the widith of your rectangle: '))
 height = float(input('Please enter the height of your rectangle: '))
-
+width = float(input('Please enter the width of your rectangle: '))
 # Calculate the area
 area = width * height
 
@@ -76,22 +138,9 @@ print(" Perimeter of your rectangle is: %2f" %perimeter)
 # Write formula so program can print correctly
 
 
-# Not Blank Function goes here
-def not_blank(question):
-
-    valid = False
-    while not valid:
-        response = input(question)
-
-        if response == "":
-            continue
-        else:
-            return response
-
-# Main Rountine goes here
-# Fiding area of a Square
-a = float(input('Please enter the widith of your Square: '))
-b = float(input('Please enter the height of your Square: '))
+# Main Routine goes here
+# Finding area of a Square
+a = float(input('Please enter the width of your Square: '))
 
 # Calculate the area
 area = a ** 2
@@ -105,30 +154,17 @@ print(" Perimeter of your square is: %2f" %perimeter)
 # Ask what the side a, b and c is
 # Write formula so program can print correctly
 
+# Main Routine goes here
 
-# Not Blank Function goes here
-def not_blank(question):
-
-    valid = False
-    while not valid:
-        response = input(question)
-
-        if response == "":
-            continue
-        else:
-            return response
-
-# Main Rountine goes here
-
-a = int(input('Enter First side'))
-b = int(input('Enter second side'))
-c = int(input('Enter Third side'))
+a = int(input('Please enter side a'))
+base = int(input('Please enter Base '))
+c = int(input('Please enter side c'))
 
 # Calculate the area
-area = a * b/2
+area = a * base/2
 
 # Calculate the perimeter
-perimeter = a + b + c
+perimeter = a + base + c
 
 print("\n Area of your Triangle is: %.2f" %area)
 print(" Perimeter of your Triangle is: %2f" %perimeter)
@@ -138,17 +174,6 @@ print(" Perimeter of your Triangle is: %2f" %perimeter)
 # Write formula so program can print correctly
 # Use letters not width or length
 
-# Not Blank Function goes here
-def not_blank(question):
-
-    valid = False
-    while not valid:
-        response = input(question)
-
-        if response == "":
-            continue
-        else:
-            return response
 
 # Main Routine goes here
 # Finding area of a Circle
