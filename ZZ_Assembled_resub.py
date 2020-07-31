@@ -55,20 +55,6 @@ def string_checker(question, to_check):
 
         print("sorry that is not a valid response")
 
-# defining
-
-# Function for a Yes/No result based on the answer provided as an arguement
-raw_input = input()
-
-def yes_or_no(question):
-    reply = str(raw_input(question+' (y/n): ')).lower().strip()
-    if reply[0] == 'y':
-        return True
-    if reply[0] == 'n':
-        return False
-    else:
-        return yes_or_no("Uhhhh... please enter ")
-
 
 # *** Main Routine starts here ***
 
@@ -163,26 +149,38 @@ if shape_name == "circle":
     # Area of a circle
     # noinspection PyUnboundLocalVariable
     area = 3.14 * radius ** 2
+    perimeter = 2 * 3.14 * radius
+
+    # Print Statements
     print("The area of your circle is {}". format(area))
+    print('The perimeter of your circle is {}'.format(perimeter))
 
 # Square
 elif shape_name == "square":
     area = num_check("What is your height?")
 
     # Area of a Square
-    # noinspection PyUnresolvedReferences,PyUnboundLocalVariable
+    # noinspection PyUnboundLocalVariable
     area = height ** 2
+    perimeter = height * 4
+
+    # Print Statements
     print("The area of your square is {}". format(area))
+    print("The perimeter of your square is [}".format(area))
 
 # Rectangle
 elif shape_name == "rectangle":
     area = num_check("What is your height?")
-    input("What is your base?")
+    width = "What is your base?"
 
     # Area of a Rectangle
-    # noinspection PyUnresolvedReferences,PyUnboundLocalVariable
+    # noinspection PyUnboundLocalVariable
     area = height * base
+    perimeter = 2 * (height * width)
+
+    # Print statements
     print("The area of your rectangle is {}".format(area))
+    print("The perimeter of your rectangle is {}".format(area))
 
 # Triangle
 elif shape_name == "triangle":
@@ -202,6 +200,9 @@ elif shape_name == "triangle":
         # Calculate the area using herons rule
         area = (s * (s - height) * (s - base) * (s - c) ** 0.5)
 
+        # Calculate the perimeter
+        perimeter = height + base + c
+
     if all_sides in ["no", "n"]:
 
         height = num_check("What is the height?")
@@ -213,6 +214,8 @@ elif shape_name == "triangle":
         s = "n/a"
 
     # noinspection PyUnboundLocalVariable
+    # Print Statements
     print('The area of the triangle is %0.2f'%area)
+    print('The perimeter of your triangle is %0.2f'%perimeter)
 
 # Output History
