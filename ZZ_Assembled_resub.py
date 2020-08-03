@@ -157,7 +157,7 @@ if shape_name == "circle":
 
 # Square
 elif shape_name == "square":
-    area = num_check("What is your height?")
+    height = num_check("What is your height?")
 
     # Area of a Square
     # noinspection PyUnboundLocalVariable
@@ -166,21 +166,21 @@ elif shape_name == "square":
 
     # Print Statements
     print("The area of your square is {}". format(area))
-    print("The perimeter of your square is [}".format(area))
+    print("The perimeter of your square is {}".format(perimeter))
 
 # Rectangle
 elif shape_name == "rectangle":
-    area = num_check("What is your height?")
-    width = "What is your base?"
+    height = num_check("What is your height?")
+    base = "What is your base?"
 
     # Area of a Rectangle
     # noinspection PyUnboundLocalVariable
     area = height * base
-    perimeter = 2 * (height * width)
+    perimeter = 2 * (height * base)
 
     # Print statements
     print("The area of your rectangle is {}".format(area))
-    print("The perimeter of your rectangle is {}".format(area))
+    print("The perimeter of your rectangle is {}".format(perimeter))
 
 # Triangle
 elif shape_name == "triangle":
@@ -215,7 +215,7 @@ elif shape_name == "triangle":
 
     # noinspection PyUnboundLocalVariable
     # Print Statements
-    print('The area of the triangle is %0.2f'%area)
-    print('The perimeter of your triangle is %0.2f'%perimeter)
+    print("The area of your triangle is {}".format(area))
+    print("The perimeter of your triangle is {}".format(perimeter))
 
 # Output History
