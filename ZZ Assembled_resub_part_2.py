@@ -132,14 +132,7 @@ measurement_name = not_blank("What is your measurement? ")
 yes_no = ["yes", "no"]
 shapes = ["circle","triangle", "square", "rectangle"]
 
-# Main Routine goes here
-
-# Iterates through string...
-
-# ask user for string
-# Instructions
-
-# Asking to do program again
+# Asking to do repeat program
 def main():
     pass
 
@@ -149,10 +142,8 @@ while True:
         break
 
 while "xxx" != stop:
-    input( "Please enter measurements one line at a time. Press 'xxx' to when"
-           "you are done." )
-    if response = "xxx":
-        break
+    input("Please enter measurements one line at a time. Press 'xxx' to when"
+          "you are done.")
 
     while True:
         shape_name = string_checker("What is the shape name? ", shapes)
