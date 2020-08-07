@@ -132,18 +132,20 @@ measurement_name = not_blank("What is your measurement? ")
 yes_no = ["yes", "no"]
 shapes = ["circle","triangle", "square", "rectangle"]
 
-# Asking to do repeat program
+# Main Routine goes here
+
+# Asking to do program again
 def main():
     pass
 
 while True:
     main( )
-    if 'y' != input( "Repeat the program? (Y/N)" ).strip( ).upper( ):
+    if 'y' != input("Repeat the program? (Y/N)" ).strip( ).upper( ):
         break
-
-while "xxx" != stop:
-    input("Please enter measurements one line at a time. Press 'xxx' to when"
-          "you are done.")
+# Loop to ask users to enter an ingredient
+while stop != "xxx":
+    if input() == "xxx":
+        break
 
     while True:
         shape_name = string_checker("What is the shape name? ", shapes)
@@ -244,6 +246,7 @@ while "xxx" != stop:
             # Print Statements
             print("The area of your triangle is {}".format(area))
             print("The perimeter of your triangle is {}".format(perimeter))
+
 
 
 # Output History
