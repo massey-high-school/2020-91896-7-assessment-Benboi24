@@ -81,6 +81,8 @@ while keep_going == "":
 
   calcuation_row = []
 
+  units = not_blank("What is your measurement? ")
+
   shape_name = string_checker("What is the shape name? ", ["xxx", "square", "circle", "triangle", "rectangle"])
 
   if shape_name.lower() == "xxx":
@@ -100,6 +102,32 @@ while keep_going == "":
     # Print Statements
     print("The area of your circle is {}". format(area))
     print('The perimeter of your circle is {}'.format(perimeter))
+
+  elif shape_name == "square":
+      height = num_check("What is your side length?")
+
+      # Area of a Square
+      # noinspection PyUnboundLocalVariable
+      area = height ** 2
+      perimeter = height * 4
+
+      # Print Statements
+      print("The area of your square is {}". format(area))
+      print("The perimeter of your square is {}".format(perimeter))
+
+  # Rectangle
+  elif shape_name == "rectangle":
+      height = num_check("What is your height?")
+      base = "What is your base?"
+
+      # Area of a Rectangle
+      # noinspection PyUnboundLocalVariable
+      area = height * base
+      perimeter = 2 * (height * base)
+
+      # Print statements
+      print("The area of your rectangle is {}".format(area))
+      print("The perimeter of your rectangle is {}".format(perimeter))
 
   calcuation_row.append(shape_name)
   calcuation_row.append(area)
