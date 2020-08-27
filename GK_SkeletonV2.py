@@ -129,59 +129,6 @@ while keep_going == "":
       print("The area of your rectangle is {}".format(area))
       print("The perimeter of your rectangle is {}".format(perimeter))
 
-  # Triangle
-  elif shape_name == "triangle":
-      # print(input)
-
-      question = input("Do you have all the sides? ")
-      # String Checker
-
-      def string_checker(question, to_check,):
-          valid = False
-          while not valid:
-
-              response = input(question).lower()
-
-              if response in to_check:
-                  return response
-
-              else:
-                  for item in to_check:
-                      # checks if response is the first letter of an item in the list
-                      if response == [0]:
-                          # note: returns the entire response rather than just the first letter
-                          return item
-
-      if input == "yes":
-          height = num_check("What is side A?")
-          base = num_check("What is side B?")
-          c = num_check("What is side C")
-
-          # Calculate s
-          s = (height + base + c) / 2
-
-          # Calculate the area using herons rule
-          area = (s * (s - height) * (s - base) * (s - c) ** .5)
-
-          # Calculate the perimeter
-          perimeter = height + base + c
-
-      elif input in ["no", "n"]:
-
-          height = num_check("What is the height?")
-          base = num_check("What is the base?")
-
-          # area using height and the base
-          # noinspection PyUnboundLocalVariable
-          area = 0.5 * height * base
-          s = "n/a"
-
-        # noinspection PyUnboundLocalVariable
-        # Print Statements
-          print("The area of your triangle is {}".format(area))
-          print("The perimeter of your triangle is {}".format(perimeter))
-
-
   calcuation_row.append(shape_name)
   calcuation_row.append(area)
   calcuation_row.append(perimeter)
