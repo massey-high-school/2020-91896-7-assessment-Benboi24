@@ -81,12 +81,12 @@ while keep_going == "":
 
   calcuation_row = []
 
-  units = not_blank("What is your measurement? ")
-
   shape_name = string_checker("What is the shape name? ", ["xxx", "square", "circle", "triangle", "rectangle"])
 
   if shape_name.lower() == "xxx":
     break
+
+  units = not_blank("What is your measurement? ")
 
   # calculations for each shape
 
@@ -118,7 +118,7 @@ while keep_going == "":
   # Rectangle
   elif shape_name == "rectangle":
       height = num_check("What is your height?")
-      base = "What is your base?"
+      base = num_check("What is your base?")
 
       # Area of a Rectangle
       # noinspection PyUnboundLocalVariable
